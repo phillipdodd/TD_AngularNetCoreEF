@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31515.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AngularNetCoreEF.API", "AngularNetCoreEF.API\AngularNetCoreEF.API.csproj", "{4F8FD161-98C8-4EF4-ACF5-91DCD6FE101B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularNetCoreEF.Web", "AngularNetCoreEF.Web\AngularNetCoreEF.Web.csproj", "{28CC55D6-4592-4F47-94C8-8013E063866F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4F8FD161-98C8-4EF4-ACF5-91DCD6FE101B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F8FD161-98C8-4EF4-ACF5-91DCD6FE101B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F8FD161-98C8-4EF4-ACF5-91DCD6FE101B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F8FD161-98C8-4EF4-ACF5-91DCD6FE101B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28CC55D6-4592-4F47-94C8-8013E063866F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28CC55D6-4592-4F47-94C8-8013E063866F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28CC55D6-4592-4F47-94C8-8013E063866F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28CC55D6-4592-4F47-94C8-8013E063866F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EB7AFB1A-9BC1-4C4B-AD4C-E897C2B9D461}
+	EndGlobalSection
+EndGlobal

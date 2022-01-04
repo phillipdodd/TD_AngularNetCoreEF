@@ -1,0 +1,24 @@
+﻿<div class="col-md-4 col-md-offset-4" style="margin-top:50px;">
+    <h3>Widget Creator</h3>
+    <br />
+    <div class="card" style="width: 24rem;">
+        <div class="card-body">
+            <div class="mb-3" ng-repeat="(key, value) in $ctrl.newWidget">
+                <label class="form-label">{{key}}</label>
+                <input type="text"
+                       class="form-control"
+                       ng-model="$ctrl.newWidget[key]"
+                       placeholder="{{key}}" />
+
+            </div>
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-success" ng-click="$ctrl.createWidget()">
+                Create
+            </button>
+            <button class="btn btn-danger" ng-click="$ctrl.cancel()" ng-if="!!$ctrl.newWidget.Name || !!$ctrl.newWidget.Active">
+                Cancel
+            </button>
+        </div>
+    </div>
+</div>

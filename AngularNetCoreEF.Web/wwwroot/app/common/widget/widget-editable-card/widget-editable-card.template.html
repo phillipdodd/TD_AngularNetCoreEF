@@ -1,0 +1,36 @@
+﻿<div class="card" style="width: 24rem;">
+    <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li ng-repeat="(key, value) in $ctrl.widget" class="list-group-item">
+                <div class="ms-2 me-auto">
+                    <div class="bold">{{key}}</div>
+                    <span ng-switch="$ctrl.editMode">
+                        <input ng-switch-when="true"
+                               type="text"
+                               ng-model="$ctrl.widget[key]"
+                               class="form-control" />
+                        <span ng-switch-default>{{value}}</span>
+                    </span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="card-footer">
+        <span ng-if="$ctrl.editMode">
+            <button ng-click="$ctrl.save()" class="btn btn-primary">
+                Save
+            </button>
+            <button ng-click="$ctrl.cancel()" class="btn btn-danger">
+                Cancel
+            </button>
+        </span>
+        <span ng-if="!$ctrl.editMode">
+            <button ng-click="$ctrl.toggleEditMode()" class="btn btn-primary">
+                Edit
+            </button>
+            <button ng-click="$ctrl.delete()" class="btn btn-danger">
+                Delete
+            </button>
+        </span>
+    </div>
+</div>

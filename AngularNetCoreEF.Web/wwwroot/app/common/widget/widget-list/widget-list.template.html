@@ -1,0 +1,10 @@
+﻿<div class="col-md-4 col-md-offset-4" style="margin-top:50px;">    
+    <h3>Widget List</h3>
+    <br />
+    <widget-editable-card 
+        ng-repeat="widget in $ctrl.widgets"
+        widget="widget"
+        on-save="$ctrl.updateWidget(widget)"
+        on-delete="$ctrl.deleteWidget(widget)"
+    ></widget-editable-card>
+</div>

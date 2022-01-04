@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>AngularNetCoreEF</title>
+
+    <link rel="stylesheet" href="index.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <script src="app/app.module.js"></script>
+
+    <script src="app/common/widget/widget.module.js"></script>
+    <script src="app/common/widget/widget.service.js"></script>
+    <script src="app/common/widget/widget-creator/widget-creator.component.js"></script>
+    <script src="app/common/widget/widget-list/widget-list.component.js"></script>
+    <script src="app/common/widget/widget-editable-card/widget-editable-card.component.js"></script>
+
+</head>
+    <body ng-app="app">
+        <widget-creator></widget-creator>
+        <hr />
+        <widget-list></widget-list>
+    </body>
+</html>
