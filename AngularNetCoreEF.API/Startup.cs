@@ -32,7 +32,7 @@ namespace AngularNetCoreEF.API
 
             //pd
             services.AddDbContextPool<WidgetContext>(options => options.UseSqlServer(Configuration.GetConnectionString("WidgetContextConnectionString")));
-            services.AddScoped<IWidgetData, SqlWidgetData>();
+            services.AddTransient<IWidgetData, SqlWidgetData>();
 
             //pd
             //services.AddSingleton<IWidgetData, MockWidgetData>();
@@ -45,7 +45,6 @@ namespace AngularNetCoreEF.API
             {
                 app.UseDeveloperExceptionPage();
             }
-
             app.UseRouting();
 
             app.UseCors(policy => {
