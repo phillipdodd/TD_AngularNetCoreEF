@@ -16,9 +16,13 @@ namespace AngularNetCoreEF.API.WidgetData
 
         public Widget AddWidget(Widget widget)
         {
+            using var transaction = _widgetContext.Database.BeginTransaction();
+
             widget.Id = Guid.NewGuid();
             _widgetContext.Widgets.Add(widget);
             _widgetContext.SaveChanges();
+
+            transaction.Commit();
             return widget;
         }
 
@@ -34,6 +38,8 @@ namespace AngularNetCoreEF.API.WidgetData
 
         public Widget UpdateWidget(Widget widget)
         {
+            using var transaction = _widgetContext.Database.BeginTransaction();
+
             Widget existingWidget = _widgetContext.Widgets.Find(widget.Id);
             if (existingWidget != null)
             {
@@ -42,14 +48,20 @@ namespace AngularNetCoreEF.API.WidgetData
                 
                 _widgetContext.Widgets.Update(existingWidget);
                 _widgetContext.SaveChanges();
+
+                transaction.Commit();
             }
             return widget;
         }
 
         public void DeleteWidget(Widget widget)
         {
+            using var transaction = _widgetContext.Database.BeginTransaction();
+
             _widgetContext.Widgets.Remove(widget);
             _widgetContext.SaveChanges();
+
+            transaction.Commit();
         }
     }
 }
